@@ -2,8 +2,10 @@
   "name": "nodejs-hw-mongodb",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
+  "main": "src/index.js",
   "scripts": {
+    "setupServer": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,8 +13,18 @@
   "license": "ISC",
   "dependencies": {
     "@eslint/js": "^9.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "eslint": "^9.4.0",
-    "prettier": "^3.3.1",
-    "globals": "^15.1.0"
+    "express": "^4.19.2",
+    "globals": "^15.1.0",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.1",
+    "pino": "^9.1.0",
+    "pino-http": "^10.1.0",
+    "prettier": "^3.3.1"
+  },
+  "devDependencies": {
+    "pino-pretty": "^11.1.0"
   }
 }
