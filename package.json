@@ -19,6 +19,7 @@
     "express": "^4.19.2",
     "globals": "^15.1.0",
     "http-errors": "^2.0.0",
+    "joi": "^17.13.1",
     "mongodb": "^6.7.0",
     "mongoose": "^8.4.1",
     "pino": "^9.1.0",

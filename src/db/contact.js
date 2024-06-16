@@ -25,5 +25,5 @@ export const contactsSchema = new Schema(
       default: 'personal',
     },
   },
-  { timestamps: true }
+  { timestamps: true, versionKey: false }
 );
