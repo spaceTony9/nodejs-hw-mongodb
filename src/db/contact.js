@@ -24,6 +24,9 @@ export const contactsSchema = new Schema(
       required: true,
       default: 'personal',
     },
+    userId: {
+      type: String,
+    },
   },
   { timestamps: true, versionKey: false }
 );
