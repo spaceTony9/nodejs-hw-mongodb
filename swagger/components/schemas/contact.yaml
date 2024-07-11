@@ -1,0 +1,39 @@
+type: object
+required:
+  - _id
+  - name
+  - phoneNumber
+  - isFavourite
+  - contactType
+  - userId
+  - photo
+properties:
+  _id:
+    description: "Contact's id"
+    type: string
+    example: 66852016e3c98a0bc385fa8f
+  name:
+    description: "Contact's name"
+    type: string
+    example: 'John Doe'
+  phoneNumber:
+    description: "Contact's phone number"
+    type: number
+    example: +10000000000
+  isFavourite:
+    description: "Contact's favourite status"
+    type: boolean
+    example: true
+  contactType:
+    description: "Contact's type"
+    type: string
+    example: [ 'work', 'home', 'personal' ]
+  userId:
+    description: "User's Id"
+    type: string
+    example: 668e284ad041f5aa558b2e07
+  photo:
+    description: "Link to contact's photo"
+    type: string
+    example: <https://res.cloudinary.com/uqwgdu/image/upload/image.png>
+

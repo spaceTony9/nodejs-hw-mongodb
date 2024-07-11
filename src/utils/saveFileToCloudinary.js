@@ -11,10 +11,5 @@ cloudinary.v2.config({
 
 export const saveFileToCloudinary = async file => {
   const response = await cloudinary.v2.uploader.upload(file.path);
-  process.env.ENABLE_CLOUDINARY = 'true';
-  process.on('exit', () => {
-    process.env.ENABLE_CLOUDINARY = 'false';
-  });
-
   return response.secure_url;
 };
