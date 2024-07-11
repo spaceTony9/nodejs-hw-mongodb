@@ -61,8 +61,6 @@ export const createContactController = async (req, res) => {
 
   let photoUrl;
 
-  console.log('ENABLE_CLOUDINARY:', process.env.ENABLE_CLOUDINARY);
-
   if (photo) {
     if (env('ENABLE_CLOUDINARY') === 'true') {
       photoUrl = await saveFileToCloudinary(photo);
