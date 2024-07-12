@@ -18,7 +18,7 @@ properties:
     example: 'John Doe'
   phoneNumber:
     description: "Contact's phone number"
-    type: number
+    type: string
     example: +10000000000
   isFavourite:
     description: "Contact's favourite status"
@@ -27,7 +27,7 @@ properties:
   contactType:
     description: "Contact's type"
     type: string
-    example: [ 'work', 'home', 'personal' ]
+    example: 'work'
   userId:
     description: "User's Id"
     type: string
@@ -35,5 +35,5 @@ properties:
   photo:
     description: "Link to contact's photo"
     type: string
-    example: <https://res.cloudinary.com/uqwgdu/image/upload/image.png>
+    example: https://res.cloudinary.com/uqwgdu/image/upload/image.png
 

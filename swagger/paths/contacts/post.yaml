@@ -20,7 +20,7 @@ requestBody:
             example: 'John Doe'
           phoneNumber:
             description: "Contact's phone number"
-            type: number
+            type: string
             example: +10000000000
           email:
             description: "Contact's email"
@@ -32,8 +32,8 @@ requestBody:
             example: false
           contactType:
             description: 'What type is the contact'
-            type: boolean
-            example: [ 'work', 'home', 'personal' ]
+            type: string
+            example: 'work'
           photo:
             description: "Contact's photo"
             type: string
@@ -48,7 +48,7 @@ responses:
           properties:
             status:
               type: integer
-              example: 200
+              example: 201
             message:
               type: string
               example: Successfully created a contact!

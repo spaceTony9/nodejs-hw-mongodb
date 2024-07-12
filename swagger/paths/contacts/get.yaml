@@ -28,7 +28,7 @@ parameters:
       type: string
       enum: [ 'asc', 'desc' ]
       example: 'asc'
-  - name: ifFavourite
+  - name: isFavourite
     in: query
     schema:
       type: boolean

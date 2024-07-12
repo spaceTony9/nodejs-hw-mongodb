@@ -12,6 +12,7 @@ tags:
     description: Operations with Contacts
 servers:
   - url: http://localhost:3000
+  - url: https://nodejs-hw-mongodb-gufi.onrender.com
 paths:
   /contacts:
     get:
@@ -30,3 +31,4 @@ components:
     bearerAuth:
       type: http
       scheme: bearer
+      bearerFormat: JWT
