@@ -11,7 +11,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:3000"
+      "url": "https://nodejs-hw-mongodb-gufi.onrender.com"
     }
   ],
   "tags": [
@@ -73,7 +73,7 @@
             }
           },
           {
-            "name": "ifFavourite",
+            "name": "isFavourite",
             "in": "query",
             "schema": {
               "type": "boolean",
@@ -193,7 +193,7 @@
                   },
                   "phoneNumber": {
                     "description": "Contact's phone number",
-                    "type": "number",
+                    "type": "string",
                     "example": 10000000000
                   },
                   "email": {
@@ -208,12 +208,8 @@
                   },
                   "contactType": {
                     "description": "What type is the contact",
-                    "type": "boolean",
-                    "example": [
-                      "work",
-                      "home",
-                      "personal"
-                    ]
+                    "type": "string",
+                    "example": "work"
                   },
                   "photo": {
                     "description": "Contact's photo",
@@ -235,7 +231,7 @@
                   "properties": {
                     "status": {
                       "type": "integer",
-                      "example": 200
+                      "example": 201
                     },
                     "message": {
                       "type": "string",
@@ -266,7 +262,7 @@
         ],
         "summary": "Get contact by id",
         "operationId": "getContact",
-        "description": "Get contact by id",
+        "description": "Retrieve a contact by ID",
         "security": [
           {
             "bearerAuth": []
@@ -286,7 +282,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Patch contact",
+            "description": "Get contact",
             "content": {
               "application/json": {
                 "schema": {
@@ -303,7 +299,7 @@
                     },
                     "message": {
                       "type": "string",
-                      "example": "Successfully patched contact with id 66852016e4c98a0bc385fa9f"
+                      "example": "Successfully retrieved contact with ID 66852016e4c98a0bc385fa9f"
                     },
                     "data": {
                       "type": "object",
@@ -359,7 +355,7 @@
                   },
                   "phoneNumber": {
                     "description": "Contact's phone number",
-                    "type": "number",
+                    "type": "string",
                     "example": 10000000000
                   },
                   "email": {
@@ -374,12 +370,8 @@
                   },
                   "contactType": {
                     "description": "What type is the contact",
-                    "type": "boolean",
-                    "example": [
-                      "work",
-                      "home",
-                      "personal"
-                    ]
+                    "type": "string",
+                    "example": "work"
                   },
                   "photo": {
                     "description": "Contact's photo",
@@ -471,7 +463,8 @@
     "securitySchemes": {
       "bearerAuth": {
         "type": "http",
-        "scheme": "bearer"
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
       }
     },
     "schemas": {
@@ -499,7 +492,7 @@
           },
           "phoneNumber": {
             "description": "Contact's phone number",
-            "type": "number",
+            "type": "string",
             "example": 10000000000
           },
           "isFavourite": {
@@ -510,11 +503,7 @@
           "contactType": {
             "description": "Contact's type",
             "type": "string",
-            "example": [
-              "work",
-              "home",
-              "personal"
-            ]
+            "example": "work"
           },
           "userId": {
             "description": "User's Id",
@@ -524,7 +513,7 @@
           "photo": {
             "description": "Link to contact's photo",
             "type": "string",
-            "example": "<https://res.cloudinary.com/uqwgdu/image/upload/image.png>"
+            "example": "https://res.cloudinary.com/uqwgdu/image/upload/image.png"
           }
         }
       }
