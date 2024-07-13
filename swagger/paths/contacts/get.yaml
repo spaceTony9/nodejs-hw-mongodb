@@ -44,7 +44,7 @@ responses:
     content:
       application/json:
         schema:
-          type: object
+          type: array
           required:
             - status
             - message
