@@ -14,31 +14,10 @@ requestBody:
           - name
           - phoneNumber
         properties:
-          name:
-            description: "Contact's name"
-            type: string
-            example: 'John Doe'
-          phoneNumber:
-            description: "Contact's phone number"
-            type: string
-            example: +10000000000
-          email:
-            description: "Contact's email"
-            type: string
-            example: muster@gmail.com
-          isFavourite:
-            description: "Is contact favourite?"
-            type: boolean
-            example: false
-          contactType:
-            description: 'What type is the contact'
-            type: string
-            enum: [ 'work','personal', 'home' ]
-            example: 'home'
-          photo:
-            description: "Contact's photo"
-            type: string
-            format: binary
+          data:
+            type: object
+            items:
+              $ref: "../../components/schemas/contact.yaml"
 responses:
   '201':
     description: Creates a contact
