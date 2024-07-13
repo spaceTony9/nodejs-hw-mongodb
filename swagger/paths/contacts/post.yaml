@@ -11,11 +11,10 @@ requestBody:
       schema:
         type: object
         required:
-          - name
-          - phoneNumber
+          - data
         properties:
           data:
-            type: object
+            type: array
             items:
               $ref: "../../components/schemas/contact.yaml"
 responses:
