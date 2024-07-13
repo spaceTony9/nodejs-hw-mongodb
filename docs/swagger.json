@@ -99,7 +99,13 @@
                   "required": [
                     "status",
                     "message",
-                    "data"
+                    "data",
+                    "page",
+                    "perPage",
+                    "totalItems",
+                    "totalPages",
+                    "hasNextPage",
+                    "hasPreviousPage"
                   ],
                   "properties": {
                     "status": {
@@ -111,19 +117,13 @@
                       "example": "Successfully found contacts!"
                     },
                     "data": {
-                      "type": "object",
-                      "required": [
-                        "data",
-                        "page",
-                        "perPage",
-                        "totalItems",
-                        "totalPages",
-                        "hasNextPage",
-                        "hasPreviousPage"
-                      ],
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      },
                       "properties": {
                         "data": {
-                          "type": "array",
+                          "type": "object",
                           "items": {
                             "$ref": "#/components/schemas/contact"
                           }

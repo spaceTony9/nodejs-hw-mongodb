@@ -49,6 +49,12 @@ responses:
             - status
             - message
             - data
+            - page
+            - perPage
+            - totalItems
+            - totalPages
+            - hasNextPage
+            - hasPreviousPage
           properties:
             status:
               type: integer
@@ -57,18 +63,12 @@ responses:
               type: string
               example: Successfully found contacts!
             data:
-              type: object
-              required:
-                - data
-                - page
-                - perPage
-                - totalItems
-                - totalPages
-                - hasNextPage
-                - hasPreviousPage
+              type: array
+              items:
+                $ref: "../../components/schemas/contact.yaml"
               properties:
                 data:
-                  type: array
+                  type: object
                   items:
                     $ref: "../../components/schemas/contact.yaml"
                 page:
