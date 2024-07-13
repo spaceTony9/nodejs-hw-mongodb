@@ -161,6 +161,9 @@
           },
           "401": {
             "$ref": "#/components/responses/401"
+          },
+          "404": {
+            "$ref": "#/components/responses/404"
           }
         }
       },
@@ -213,8 +216,10 @@
                       "example": "Successfully created a contact!"
                     },
                     "data": {
-                      "type": "object",
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }
@@ -277,8 +282,10 @@
                       "example": "Successfully retrieved contact with ID 66852016e4c98a0bc385fa9f"
                     },
                     "data": {
-                      "type": "object",
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }
@@ -385,8 +392,10 @@
                       "example": "Successfully patched contact with id 66852016e4c98a0bc385fa9f"
                     },
                     "data": {
-                      "type": "object",
-                      "$ref": "#/components/schemas/contact"
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/contact"
+                      }
                     }
                   }
                 }

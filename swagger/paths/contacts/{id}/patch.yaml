@@ -64,8 +64,9 @@ responses:
               example:
                 Successfully patched contact with id 66852016e4c98a0bc385fa9f
             data:
-              type: object
-              $ref: '../../../components/schemas/contact.yaml'
+              type: array
+              items:
+                $ref: '../../../components/schemas/contact.yaml'
   '401':
     $ref: '../../../components/responses/401.yaml'
   '404':
