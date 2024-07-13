@@ -209,7 +209,12 @@
                   "contactType": {
                     "description": "What type is the contact",
                     "type": "string",
-                    "example": "work"
+                    "enum": [
+                      "work",
+                      "personal",
+                      "home"
+                    ],
+                    "example": "home"
                   },
                   "photo": {
                     "description": "Contact's photo",

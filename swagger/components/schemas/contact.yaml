@@ -25,9 +25,10 @@ properties:
     type: boolean
     example: true
   contactType:
-    description: "Contact's type"
+    description: 'What type is the contact'
     type: string
-    example: 'work'
+    enum: [ 'work','personal', 'home' ]
+    example: 'home'
   userId:
     description: "User's Id"
     type: string
