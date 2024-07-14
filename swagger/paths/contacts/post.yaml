@@ -6,17 +6,32 @@ description: 'Create a Contact with payload'
 security:
   - bearerAuth: [ ]
 requestBody:
+  required: true
   content:
     multipart/form-data:
       schema:
         type: object
         required:
-          - data
+          - name
+          - phoneNumber
         properties:
-          data:
-            type: array
-            items:
-              $ref: "../../components/schemas/contact.yaml"
+          name:
+            type: string
+            example: "Andrea"
+          phoneNumber:
+            type: string
+            example: "+3803232332234"
+          isFavourite:
+            type: boolean
+            example:
+          contactType:
+            type: string
+            enum: [ "work", 'home', 'personal' ]
+            example: 'work'
+          photo:
+            type: string
+            format: binary
+            example: "https://res.cloudinary.com/dkp6r3ryz/image/upload/v1720687917/jbvobqd4hn2ttqswed7j.jpg"
 responses:
   '201':
     description: Creates a contact
