@@ -21,6 +21,9 @@ requestBody:
           phoneNumber:
             type: string
             example: "+3803232332234"
+          email:
+            type: string
+            example: muster@gmail.com
           isFavourite:
             type: boolean
             example:

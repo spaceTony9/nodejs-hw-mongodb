@@ -198,6 +198,10 @@
                     "type": "string",
                     "example": "+3803232332234"
                   },
+                  "email": {
+                    "type": "string",
+                    "example": "muster@gmail.com"
+                  },
                   "isFavourite": {
                     "type": "boolean",
                     "example": null
@@ -500,6 +504,11 @@
             "description": "Contact's name",
             "type": "string",
             "example": "John Doe"
+          },
+          "email": {
+            "description": "Contact's email",
+            "type": "string",
+            "example": "muster@gmail.com"
           },
           "phoneNumber": {
             "description": "Contact's phone number",
