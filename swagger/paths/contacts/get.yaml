@@ -26,7 +26,6 @@ parameters:
     schema:
       type: string
       enum: [ 'asc', 'desc' ]
-      example: 'asc'
   - name: isFavourite
     in: query
     schema:
