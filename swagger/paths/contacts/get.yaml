@@ -20,7 +20,6 @@ parameters:
     in: query
     schema:
       type: string
-      example: 'name'
     description: "All contact's fields can be mentioned. Default value - _id"
   - name: sortOrder
     in: query
@@ -32,12 +31,11 @@ parameters:
     in: query
     schema:
       type: boolean
-      example: true
   - name: contactType
     in: query
     schema:
       type: string
-      example: personal
+      enum: [ "work", 'home' , 'personal' ]
 responses:
   '200':
     description: Successfully found contacts!

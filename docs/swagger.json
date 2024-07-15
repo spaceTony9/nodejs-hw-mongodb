@@ -55,8 +55,7 @@
             "name": "sortBy",
             "in": "query",
             "schema": {
-              "type": "string",
-              "example": "name"
+              "type": "string"
             },
             "description": "All contact's fields can be mentioned. Default value - _id"
           },
@@ -76,8 +75,7 @@
             "name": "isFavourite",
             "in": "query",
             "schema": {
-              "type": "boolean",
-              "example": true
+              "type": "boolean"
             }
           },
           {
@@ -85,7 +83,11 @@
             "in": "query",
             "schema": {
               "type": "string",
-              "example": "personal"
+              "enum": [
+                "work",
+                "home",
+                "personal"
+              ]
             }
           }
         ],
